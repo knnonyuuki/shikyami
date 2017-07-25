@@ -1,0 +1,114 @@
+.bm-burger-button {
+    position: fixed;
+    width: 18px;
+    height: 12px;
+    left: 20px;
+    top: 46px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+    background: #373a47;
+}
+.bm-burger-button .bm-burger-bars{
+    background-color: #FFFFFF;
+}
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+    height: 24px;
+    width: 24px;
+    display: none;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+    background: #bdc3c7;
+}
+
+/* General sidebar styles */
+.bm-menu {
+    background: #373a47;
+    padding: 2.5em 1.5em 0;
+    font-size: 1.15em;
+}
+.bm-menu{
+    background-color: #FFFFFF;
+    padding: 0;
+}
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+    fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+    color: #b8b7ad;
+    padding: 0.8em;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+    background: white;
+}
+.button-bn{
+    width: 60%;
+    padding: 2.5em 1.5em 0;
+}
+.bm-item-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.bm-item-list>*{
+
+}
+.bm-close-button{
+    width: 166px;
+    height: 39px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+    border:0;
+}
+.bm-link-list>a{
+    display: block;
+    line-height: 50px;
+    padding-left: 20px;
+    font-size: 14px;
+    color:#878787;
+    border-bottom: 1px solid #e3e9ec;
+}
+/* userinfo */
+.bm-menu img{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    margin-top: 34px;
+    display: block;
+    margin: 0 auto;
+}
+.bm-user-info{
+    display: inline-block;
+    font-size: 14px;
+    color:#f77063;
+}
+.bm-user-auth{
+    text-align: center;
+}
+.bm-user-auth a{
+    display: inline-block;
+    font-size: 14px;
+    color:#f77063;
+}
+.bm-user-auth .bm-user-left{
+    padding-right: 5px;
+    border-right:2px solid #f77062 ;
+    line-height: 1;
+}
+.bm-user-auth .bm-user-right{
+    padding-left: 5px;
+}
+
