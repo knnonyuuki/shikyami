@@ -1,37 +1,40 @@
 import React,{Component} from 'react'
-import store from "../../../redux/store"
-import axios from 'axios'
+import './signup.css'
+import {Link} from 'react-router-dom'
+import TitleHeader from '../../shared/TitleHeader/TitleHeader'
 class Signup extends React.Component{
-    signup=(e)=>{
-        e.preventDefault()
-        let username=this.usernameInput.value
-        let password=this.passwordInput.value
-        console.log()
-        let data={username,password}
-        axios.post('http://192.168.0.122:3008/user/signup', data).then(res => {
-            console.log(res.data)
-            if(res.data.username){
-                console.log(res.data.userId)
-                store.dispatch({type:'AUTH_USER',user:res.data.username})
-                localStorage.setItem('userId',res.data.userId)
-                this.signupForm.reset() //清空表单
-                this.props.history.push('/')
-            }
-        }).catch(err=>{console.log(err.response)})
-    }
-
     render(){
         return(
-            <div className="bd">
-                <h1>注册</h1>
-                <form onSubmit={this.signup}>
-                    <div><input ref={value=>this.usernameInput=value} type="text" placeholder="用户名"/>用户名</div>
-                    <div><input ref={value=>this.passwordInput=value} type="password" placeholder="密码"/>密码</div>
-                    <div> <input type="password" placeholder="再输入一次"/>再输入一次密码</div>
-                    <button type="submit">提交</button>
-                </form>
-            </div>
+            <div className="signup">
+                <TitleHeader title="signup" />
+                <div className="signup-content">
+                    <div className="signup-hero">
+                        <h1 className="title">
+                            登录
+                        </h1>
+                        <p className="slogan">
+                            呵呵哈哈哈
+                        </p>
+                    </div>
 
+                        <form className="signup-form signup-form-wrap">
+                            <div className="signup-text-input">
+                                <div className="signup-text-inputs-inner">
+                                    <input type="text" placeholder="用户名"/>
+                                    <input type="text" placeholder="email"/>
+                                    <input type="password" placeholder="密码"/>
+                                    <input type="password" placeholder="重输密码"/>
+                                </div>
+                            </div>
+                            <div className="signup-actions">
+                                <button type="submit" value="注册" >注册</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div className="signup-other-option">
+                        <Link to="/login">已有账号？直接登录</Link>
+                    </div>
+                </div>
         )
     }
 }

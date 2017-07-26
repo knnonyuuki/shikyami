@@ -36,13 +36,9 @@ class Sidebar extends Component{
                     <div className="bm-link-list">
                         <button className="bm-close-button" onClick={this.closeBmMenu}>关闭</button>
                     </div>
-
-
                 </Menu>
             </div>
-
         );
     }
-
 }
 export default Sidebar

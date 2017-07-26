@@ -14,3 +14,7 @@ p {
 a {
   text-decoration: none;
 }
+.card-r{
+  display: flex;
+  margin:20% auto;
+}

@@ -15,10 +15,8 @@ import {
 } from "react-router-dom"
 class App extends Component {
     componentDidMount(){
-
         let userId = localStorage.getItem('userId')
         console.log('=====', localStorage.getItem('userId'))
-
         console.log(localStorage.getItem('userId'))
         axios.get(`http://192.168.0.122:3008/user/${userId}`)
             .then(res=>{
@@ -33,14 +31,12 @@ class App extends Component {
          <Router>
              <div>
                  <Route render={({location})=>{return location.pathname !=='/'?(<Sidebar/>):null}}/>
-
                  <Switch>
                      <Route exact path="/" component={Home}/>
                      <Route path="/signup" component={Signup}/>
                      <Route path="/login" component={Login}/>
                      <Route path="/dashboard" component={Dashboard}/>
                  </Switch>
-
              </div>
          </Router>
      </div>

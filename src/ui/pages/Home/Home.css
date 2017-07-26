@@ -43,3 +43,8 @@
     display: flex;
     justify-content: space-around;
 }
+.bd h1{
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20%;
+}
